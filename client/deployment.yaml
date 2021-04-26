@@ -15,11 +15,11 @@ spec:
     spec:
       containers:
       - name: grpc-server-gke
-        image: gcr.io/grpc-client-305816/grpc:latest
+        image: gcr.io/grafana-311201/grpc-server:latest
         ports:
         - containerPort: 50051
       - name: grpc-client-gke
-        image: gcr.io/grpc-client-305816/grpc-client-image:latest
+        image: gcr.io/grafana-311201/grpc-client:latest
         env: 
         - name: GRPC_ENDPOINT
           value: localhost:50051
